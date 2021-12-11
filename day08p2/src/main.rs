@@ -51,10 +51,7 @@ fn main() {
         // 0 has 1 unshared segment with 5
         for digit in six_segments {
             if digit.chars().filter(|c| !decoded[5].contains(*c)).count() == 1 {
-                let oddity = digit
-                    .chars()
-                    .find(|c| !decoded[5].contains(*c))
-                    .unwrap();
+                let oddity = digit.chars().find(|c| !decoded[5].contains(*c)).unwrap();
                 if decoded[1].contains(oddity) {
                     decoded[9] = digit;
                 } else {
@@ -72,6 +69,7 @@ fn main() {
                 2 => num.push('1'),
                 3 => num.push('7'),
                 4 => num.push('4'),
+                // There might have been a faster way to do this, like another mapping/HashMap to get the corresponding number
                 5 => {
                     if digit.chars().filter(|c| decoded[2].contains(*c)).count() == 5 {
                         num.push('2')
