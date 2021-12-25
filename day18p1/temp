@@ -1,0 +1,71 @@
+
+running 1 test
+test helper ... FAILED
+
+failures:
+
+---- helper stdout ----
+PAIR: [2,[[[0,8],[3,[1,0]]],[[0,8],[7,[1,6]]]]] 
+Nesting check: [2,[[[0,8],[3,[1,0]]],[[0,8],[7,[1,6]]]]]
+Checking 2
+Checking [[[0,8],[3,[1,0]]],[[0,8],[7,[1,6]]]]
+Checking [[0,8],[3,[1,0]]]
+Checking [0,8]
+Checking 0
+Checking 8
+Checking [3,[1,0]]
+Checking 3
+Checking [1,0]
+Adding 0 and returning false
+Adding 0 and returning false
+Adding 0 left is -1
+Nesting step: [2,[[[0,8],[4,0]],[[0,8],[7,[1,6]]]]]
+Checking 2
+Checking [[[0,8],[4,0]],[[0,8],[7,[1,6]]]]
+Checking [[0,8],[4,0]]
+Checking [0,8]
+Checking 0
+Checking 8
+Checking [4,0]
+Checking 4
+Checking 0
+Checking [[0,8],[7,[1,6]]]
+Checking [0,8]
+Checking 0
+Checking 8
+Checking [7,[1,6]]
+Checking 7
+Checking [1,6]
+Adding 6 and returning false
+Adding 6 and returning false
+Adding 6 and returning false
+Adding 6 and returning false
+Nesting step: [2,[[[0,8],[4,0]],[[0,8],[8,0]]]]
+Checking 2
+Checking [[[0,8],[4,0]],[[0,8],[8,0]]]
+Checking [[0,8],[4,0]]
+Checking [0,8]
+Checking 0
+Checking 8
+Checking [4,0]
+Checking 4
+Checking 0
+Checking [[0,8],[8,0]]
+Checking [0,8]
+Checking 0
+Checking 8
+Checking [8,0]
+Checking 8
+Checking 0
+Splitting check: [2,[[[0,8],[4,0]],[[0,8],[8,0]]]]
+thread 'helper' panicked at 'assertion failed: `(left == right)`
+  left: `"[2,[[[0,8],[4,0]],[[0,8],[8,0]]]]"`,
+ right: `"[[[[6,7],[6,7]],[[7,7],[0,7]]],[[[8,7],[7,7]],[[8,8],[8,0]]]]"`', src/main.rs:412:5
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    helper
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 9 filtered out; finished in 0.00s
+
