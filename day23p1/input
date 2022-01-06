@@ -1,0 +1,41 @@
+I did this by hand - and after thinking for a long while I decided just to do both by hand.
+
+It took me a while to even begin to think this may be a shortest path question. At this point, it's been so long I'd rather just complete it now so I can let myself look at the answers and maybe reflect/implement on a coded solution later.
+
+#############
+#...........#
+###A#D#C#A###
+  #C#D#B#B#
+  #########
+
+############# 72
+#...B.....A.#
+###A#D#C#.###
+  #C#D#B#.#
+  #########
+
+############# 14030
+#.........A.#
+###A#.#C#D###
+  #C#B#B#D#
+  #########
+
+############# 502
+#.A.C...C.A.#
+###.#.#.#D###
+  #.#B#B#D#
+  #########
+
+############# 53
+#...C...C.A.#
+###.#B#.#D###
+  #A#B#.#D#
+  #########
+
+############# 708
+#...........#
+###A#B#C#D###
+  #A#B#C#D#
+  #########
+
+708+53+502+14030+72 = 15365
