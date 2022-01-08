@@ -2,15 +2,21 @@
 
 I do not guarantee my code to be the fastest, the cleanest, or even the most idiomatic. It is an exploration of the [Advent of Code](https://adventofcode.com), and an effort to improve my usage of Rust. What I write here is a reflection of my experience, from which I hope to improve my skills coding and problem solving B) I'm not looking at solutions until I've completed a problem, and even then I intend to do so in chunks, so that I can compare more general trends to what others are doing alongside the oppurtunity to pick apart specific questions.
 
-Something that makes this whole ordeal unique is the fact that it is an advent - browsing [r/adventofcode](https://reddit.com/r/adventofcode) has made it clear that this is much more than an elongated coding challenge. The variety of posts - spanning from help, to memes, to reflections and performance metrics - makes this actually feel like something special. People are here beause they want to be and because they have their own reasons, and I've begun to look forward to seeing what others have to say on the problem of the day. Perhaps in years to come I try the Advent of Code in a different language, with efforts to improve performance or be the fastest to solve a problem.
+With the (delayed) completion of the AoC 2021, I can definitely say it gets harder in the last week. I initially planned to write a lot more than what I'm writing now, but I realized I'd probably get more benefit reviewing the experience if I kept it succint.
 
-## Problems 1-10
+**I experienced..**
+- How nice iterators feel. While Rust's standard library can sometimes feel minimal, I never had a problem with iterator capabilities (windows, map, filter, etc.)
+- Using generics and implementing traits! It wasn't necessary, but I'd like ot think it made code more idiomatic and generalizable
+- Fights with the borrow checker, which ultimately ended with a better respect for the rules. Kind of seems like a right of passage
+- `cargo clippy` and `cargo fmt` 👌
+- The minimal effort it takes to write a test
+- A sense of dread when I decided to `clone()` something I new would be large
+- Self questioning after spending multiple hours trying to do day23p2 by hand
+- Inferiority when seeing the performance and time it took people to solve questions
 
-I'm not relaying every thought that went through my head - you can look at the source to see if I had additional comments. Working on problems made me realize how this could differ from a coding interview - there is no time limit, both when coding up the solution or letting it run. My answers are quick enough, but I definitely see room for improvement. There are also two parts, so you have to make a trade-off between quickly finishing the first part and generalizing your solution enough to quickly solve the second part. As a result, some parts of the same day look very different while other look nearly identical - some of the small modifications to a second part means it incurs an unnecessary cost from the way the first part was architectured.
-
-Overall, it was pretty fun! Nothing has stumped me yet, but it does get progressively harder. I've been coming back to iterators again and again - it might be from that iterators are perfect for the nature of short questions, but it may also be from the fact that Rust's toolkit for iterating just feels so easy to use. Questions not mentioned were generally very similar to other solutions I saw online - oftentimes it made me realize I could've used more iterators, or have made a couple of small tweaks to be slightly more efficient. I might also considering restructuring the way I seperate problems in the future, and make use of Rust's testing capabilities. People seem to really like Rust! There are also some people who go really hard - documentation, custom built aoc libraries, flamegraphing, etc.
-
-### Specific Problems
-* **1:** [Seems like the best solution](https://github.com/SvetlinZarev/advent-of-code/blob/main/2021/aoc-day-01/src/lib.rs) was to use the `windows` function. My solution kind of lacking in comparison. Also, I should have just compared the number that was being replaced, as opposed to summing everything up.
-* **5:** Of the 10 days, this probably took me the longest - probably an embarassing 3 hours for the first part. For some reason, I was thinking just plotting every point would've taken too much space, and was initially trying to only keep the endpoints of each line to determine the intersections.
-* **9:** I use a trait when in retrospect it wasn't necessary at all. It was neat to create my own generic function over a `Vec<Vec<T>> where T: Copy` - I'm realizing I probably won't ever have to use all the functionality Rust provides (like lifetimes), but maybe that's a good thing. 
+**I did not experience..**
+- Lifetimes, though there were some questions where I thought they might be useful. Makes me wonder how necessary it is to write operational code, and how necessary it is to write *fast* code
+- `unsafe` - not necessary in the same way life times weren't
+- External libraries. I completed everything with std
+- Thorough performance testing - though this may be something I'd like to do in the future with a library or flamegraph. I just `time`d all my binaries
+- Macros, docs, custom use of `Cargo.toml`, and many more...
