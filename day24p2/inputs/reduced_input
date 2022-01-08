@@ -1,0 +1,248 @@
+inp w INPUT 1
+add x 14
+eql x w
+eql x 0 // x = 1
+mul y 0
+add y 25
+mul y x 
+add y 1 // y = 26
+mul z y
+mul y 0
+add y w
+add y 12
+mul y x
+add z y // z = i1 + 12
+inp w INPUT 2
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 11
+eql x w
+eql x 0 // x = 1
+mul y 0
+add y 25
+mul y x
+add y 1 // y = 26
+mul z y // z = (i1 + 12) * 26
+mul y 0
+add y w
+add y 8
+mul y x
+add z y // z = ((i1 + 12) * 26) + (i2 + 8)
+inp w INPUT 3
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 11
+eql x w 
+eql x 0 // x = 1
+mul y 0
+add y 25
+mul y x
+add y 1 // y = 26
+mul z y // z = (((i1 + 12) * 26) + (i2 + 8) * 26)
+mul y 0
+add y w
+add y 7
+mul y x
+add z y // z = (((i1 + 12) * 26) + (i2 + 8) * 26) + (i3 + 7)
+inp w INPUT 4
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 14
+eql x w
+eql x 0 // x = 1
+mul y 0
+add y 25
+mul y x
+add y 1 // y = 26
+mul z y // z = ((((i1 + 12) * 26) + (i2 + 8) * 26) + (i3 + 7)) * 26
+mul y 0
+add y w
+add y 4
+mul y x
+add z y // z = ((((((i1 + 12) * 26) + (i2 + 8)) * 26) + (i3 + 7)) * 26) + (i4 + 4))
+inp w INPUT 5
+mul x 0
+add x z
+mod x 26
+div z 26 // z = ((((((i1 + 12) * 26) + (i2 + 8)) * 26) + (i3 + 7)) * 26) + (i4 + 4)) / 26
+add x -11 // x = (((((((i1 + 12) * 26) + (i2 + 8)) * 26) + (i3 + 7)) * 26) + (i4 + 4)) % 26) - 11
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 4
+mul y x
+add z y // here we either do * 26) + i5 + 4 or dont change z at all 
+inp w INPUT 6
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 12
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y // z *= 26
+mul y 0
+add y w
+add y 1
+mul y x
+add z y // z += i6 + 1
+inp w INPUT 7
+mul x 0
+add x z
+mod x 26
+div z 26 // z /= 26
+add x -1
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 10
+mul y x
+add z y // either do nothing or multiply by 26) + i7 + 10
+inp w INPUT 8
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 10
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y // z *= 26
+mul y 0
+add y w
+add y 8
+mul y x
+add z y // z += i8 + 8
+inp w INPUT 9
+mul x 0
+add x z
+mod x 26
+div z 26 // z /= 26
+add x -3
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 12
+mul y x
+add z y // either * 26) + i9 + 12 or no change
+inp w INPUT 10
+mul x 0
+add x z
+mod x 26
+div z 26 z /= 26
+add x -4
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 10
+mul y x
+add z y
+inp w INPUT 11
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -13
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 15
+mul y x
+add z y
+inp w INPUT 12
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -8
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 4
+mul y x
+add z y
+inp w INPUT 13
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 13
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 10
+mul y x
+add z y
+inp w INPUT 14
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -11
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 9
+mul y x
+add z y
